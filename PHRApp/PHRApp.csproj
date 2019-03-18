@@ -138,6 +138,12 @@
       <Version>6.1.9</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="CL_UWP\CL_UWP.csproj">
+      <Project>{eda1762a-46bd-425c-8be0-d4c5e6bc9292}</Project>
+      <Name>CL_UWP</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -12,28 +12,40 @@
 
     <Grid Height="640" Width="360" Background="Black">
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="480"/>
+            <RowDefinition Height="450"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
+
+        <!--30-->
+        <StackPanel x:Name="stpTitleBar">
+            <TextBlock x:Name="tbTitle" Text="Rehearse 2 Ready"
+                       FontSize="20" Foreground="Ivory"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
         <!--60-->
-        <StackPanel x:Name="stpTopBar">
-            
+        <StackPanel x:Name="stpTopBar" Grid.Row="1">
+            <AppBarButton x:Name="BtnPlayController" 
+                          Foreground="Ivory"
+                          Icon="Play" Label="Run" 
+                          HorizontalAlignment="Center"/>
+
 
         </StackPanel>
         <!--40-->
-        <StackPanel x:Name="stpEyes" Grid.Row="1">
+        <StackPanel x:Name="stpEyes" Grid.Row="2">
 
         </StackPanel>
-        <!--480-->
-        <StackPanel x:Name="stpMain" Grid.Row="2">
-            
-           
+        <!--450-->
+        <StackPanel x:Name="stpMain" Grid.Row="3">
 
+
+            <MediaElement x:Name="PHRMediaElement"/>
         </StackPanel> 
         <!--60-->
-        <StackPanel x:Name="stpBotBar" Grid.Row="3">
+        <StackPanel x:Name="stpBotBar" Grid.Row="4">
            
 
         </StackPanel>
