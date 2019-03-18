@@ -5,10 +5,37 @@
     xmlns:local="using:PHRApp.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="640"
+    d:DesignWidth="360"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Height="640" Width="360" Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="480"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <!--60-->
+        <StackPanel x:Name="stpTopBar">
+            
 
+        </StackPanel>
+        <!--40-->
+        <StackPanel x:Name="stpEyes" Grid.Row="1">
+
+        </StackPanel>
+        <!--480-->
+        <StackPanel x:Name="stpMain" Grid.Row="2">
+            
+           
+
+        </StackPanel> 
+        <!--60-->
+        <StackPanel x:Name="stpBotBar" Grid.Row="3">
+           
+
+        </StackPanel>
     </Grid>
 </Page>
