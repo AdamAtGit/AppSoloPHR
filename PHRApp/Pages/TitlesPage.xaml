@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="PHRApp.Pages.TitlesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PHRApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <!--Windows 8.1-->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".75*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height=".75*"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="stpTopBar">
+
+            <TextBlock Text="Titles" FontSize="22" 
+                   HorizontalAlignment="Center"
+                   Foreground="DodgerBlue"/>
+        </StackPanel>
+
+        <StackPanel x:Name="stpTitles" Grid.Row="1">
+            <TextBlock Text="Titles" FontSize="18" 
+                   HorizontalAlignment="Center"/>
+            <ListView x:Name="ListViewTitles">
+                <AppBarButton x:Name="BtnAddTitle"
+                                  Label="add" Icon="Add"
+                                  Click="BtnAddTitle_Click"/>
+                <AppBarButton x:Name="BtnReload"
+                                  Label="Refresh" Icon="Refresh"
+                                  Click="BtnReload_Click"/>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel x:Name="stpPlaylist" Grid.Row="2">
+            <TextBlock Text="Playlists" FontSize="18" 
+                   HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel x:Name="stpBottomBar" Grid.Row="3">
+            <TextBlock Text="bottom bar" 
+                   HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>

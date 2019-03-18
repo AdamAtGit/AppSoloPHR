@@ -67,8 +67,8 @@ namespace PHRApp
 
                 using (var db = new SQLite.SQLiteConnection(dbPath))
                 {
-                    db.CreateTable<Classes.Title>();
-                    db.CreateTable<Classes.PlayList>();
+                   // db.CreateTable<Classes.Title>();
+                   // db.CreateTable<Classes.PlayList>();
                 }
 
 

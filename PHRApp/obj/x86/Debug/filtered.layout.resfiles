@@ -9,5 +9,7 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 Pages\PHR_Page.xbf
+Pages\TitlesPage.xbf
 PHRApp.xr.xml
+UserControls\TitlesUserControl.xbf
 Properties\Default.rd.xml

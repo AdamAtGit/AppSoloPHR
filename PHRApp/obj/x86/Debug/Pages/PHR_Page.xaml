@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="PHRApp.Pages.PHR_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PHRApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="640"
+    d:DesignWidth="360"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Height="640" Width="360" Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="450"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <!--30-->
+        <StackPanel x:ConnectionId='2' x:Name="stpTitleBar">
+            <TextBlock x:ConnectionId='9' x:Name="tbTitle" Text="Rehearse 2 Ready"
+                       FontSize="20" Foreground="Ivory"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+        <!--60-->
+        <StackPanel x:ConnectionId='3' x:Name="stpTopBar" Grid.Row="1">
+            <AppBarButton x:ConnectionId='8' x:Name="BtnPlayController" 
+                          Foreground="Ivory"
+                          Icon="Play" Label="Run" 
+                          HorizontalAlignment="Center"/>
+
+
+        </StackPanel>
+        <!--40-->
+        <StackPanel x:ConnectionId='4' x:Name="stpEyes" Grid.Row="2">
+
+        </StackPanel>
+        <!--450-->
+        <StackPanel x:ConnectionId='5' x:Name="stpMain" Grid.Row="3">
+
+
+            <MediaElement x:ConnectionId='7' x:Name="PHRMediaElement"/>
+        </StackPanel> 
+        <!--60-->
+        <StackPanel x:ConnectionId='6' x:Name="stpBotBar" Grid.Row="4">
+           
+
+        </StackPanel>
+    </Grid>
+</Page>
+

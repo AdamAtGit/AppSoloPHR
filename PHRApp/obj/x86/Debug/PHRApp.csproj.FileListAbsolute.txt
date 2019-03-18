@@ -221,3 +221,17 @@ C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj
 C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Pages\TitlesPage.xbf
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\UserControls\TitlesUserControl.xbf
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\CL_UWP.dll
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\CL_UWP.pdb
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\CL_UWP.pri
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\Pages\TitlesPage.g.i.cs
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\Pages\TitlesPage.g.cs
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\UserControls\TitlesUserControl.g.i.cs
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\UserControls\TitlesUserControl.g.cs
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\Pages\TitlesPage.xaml
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\UserControls\TitlesUserControl.xaml
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\Pages\TitlesPage.xbf
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\UserControls\TitlesUserControl.xbf
+C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\obj\x86\Debug\PHRApp.csproj.GenerateResource.Cache

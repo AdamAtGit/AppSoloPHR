@@ -41,4 +41,5 @@ namespace CL_UWP.SpeechClasses
 
             mediaElement.MediaEnded -= endOfPlayHandler;
         }
+    }
 }
