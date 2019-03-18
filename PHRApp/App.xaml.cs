@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +23,13 @@ namespace PHRApp
     /// </summary>
     sealed partial class App : Application
     {
+
+        private static string dbPath = string.Empty;
+        public static string DBPath
+        {
+            get { return dbPath; }
+            set { dbPath = value; }
+        }
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -54,6 +62,18 @@ namespace PHRApp
                 {
                     //TODO: Load state from previously suspended application
                 }
+
+                DBPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "prsapp15.sqlite");
+
+                using (var db = new SQLite.SQLiteConnection(dbPath))
+                {
+                    db.CreateTable<Classes.Title>();
+                    db.CreateTable<Classes.PlayList>();
+                }
+
+
+
+
 
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
