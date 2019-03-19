@@ -12,52 +12,61 @@
 
     <Grid Height="640" Width="360" Background="Black">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="220"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="450"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
-        <!--30-->
-        <StackPanel x:ConnectionId='2' x:Name="stpTitleBar">
-            <TextBlock x:ConnectionId='29' x:Name="tbTitle" Text="Rehearse 2 Ready"
-                       FontSize="20" Foreground="Ivory"
-                       HorizontalAlignment="Center"/>
+        <!--1st Row  30 -->
+        <StackPanel x:ConnectionId='2' x:Name="stpTitleBar"><!--Background="Ivory"-->
+            <TextBlock x:ConnectionId='32' x:Name="tbTitle" Text="Rehearse 2 Ready"
+                       FontSize="18"
+                       HorizontalAlignment="Center"/> <!--Foreground="Black"-->
         </StackPanel>
         
-        <!--60-->
+        <!--2nd Row  60-->
         <StackPanel x:ConnectionId='3' x:Name="stpTopBar" Grid.Row="1">
-            <AppBarButton x:ConnectionId='28' x:Name="BtnPlayController" 
+            <!--<TextBlock Text="Eyes Here"/>-->
+            <AppBarButton x:ConnectionId='31' x:Name="BtnPlayController" 
                           Foreground="Ivory"
                           Icon="Play" Label="Run" 
                           HorizontalAlignment="Center"/>
 
         </StackPanel>
         
-        <!--40-->
+        <!--2nd Row  40 -->
         <StackPanel x:ConnectionId='4' x:Name="stpEyes" Grid.Row="2">
 
         </StackPanel>
-        
-        <!--450-->
-        <StackPanel x:ConnectionId='5' x:Name="stpMain" Grid.Row="3" VerticalAlignment="Top"
-                    HorizontalAlignment="Stretch" Background="#2a2a2a">
-            <Button x:ConnectionId='24' x:Name="btnRecognitionTtsRawBigAsync"
+
+        <!--3rd Row  90  Background="#2a2a2a"-->
+        <StackPanel x:ConnectionId='5' x:Name="stpMain" Grid.Row="2" VerticalAlignment="Top"
+                    HorizontalAlignment="Stretch">
+            <Button x:ConnectionId='28' x:Name="btnRecognitionTtsRawBigAsync"
                     HorizontalAlignment="Center"
                     BorderBrush="DarkGray" 
-                    Height="Auto" Width="Auto" Margin="0 8 0 0"
+                    Height="Auto" Width="Auto" Margin="0 0 0 0"
                     Visibility="Visible">
-                <Image x:ConnectionId='27' x:Name="imgMicrophoneTapped"                      
+                <Image x:ConnectionId='30' x:Name="imgMicrophoneTapped"                      
                        Source="/Assets/Misc/Mic-Icon-Bl-03.png"               
                        Height="60" Width="60" Margin="0 0 0 0"/>
             </Button>
-            <TextBlock x:ConnectionId='25' x:Name="tbRecogStatus" FontSize="12.5"
+            <TextBlock x:ConnectionId='29' x:Name="tbRecogStatus" FontSize="12.5"
                            Text="Tap Mic to start Dictating" Foreground="Ivory"
-                           Margin="0,5,0,0"
+                           Margin="0,0,0,5"
                            HorizontalAlignment="Center"
-                            Visibility="Visible"/>
-            <TextBox x:ConnectionId='26' x:Name="boxTtsRawBig" Height="230" Width="350"
+                           Visibility="Visible"/>
+        </StackPanel>
+       
+        <!--4th Row  220 -->
+        <StackPanel x:ConnectionId='6' x:Name="stpPHRRotater" Grid.Row="3">
+                <TextBox x:ConnectionId='27' x:Name="boxTtsRawBig" Height="220" Width="360"
                      Background="Black" Foreground="Ivory"
                      FontSize="16"
                      TextWrapping="Wrap"
@@ -66,38 +75,47 @@
                      Text= "Prompt "
                      IsSpellCheckEnabled="True"
                      HorizontalAlignment="Center" VerticalAlignment="Top"
-                     Margin="0 5"/>
+                     Margin="0 0"/>
             <!--PlaceholderText="Dictate and/or Type, Paste the Text to be Spoken!"-->
         </StackPanel>
         
-        <!--Grid.Row="2"-->
-        <StackPanel x:ConnectionId='6' x:Name="stpPlayControls"  Orientation="Horizontal"
-                    Visibility="Visible">
-            <AppBarButton x:ConnectionId='18'  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
+        <!-- 5th optional Row -->
+        <StackPanel x:ConnectionId='7' x:Name="stpPlayControls" Orientation="Horizontal"
+                    Visibility="Visible" Grid.Row="4">
+            <AppBarButton x:ConnectionId='21'  x:Name="BtnRepeatMediaOutAsync" Label="Play" Icon="play"                    
                                                                 Tag="PlayRepeaterUC"
-                           Margin="0 0 0 10" Height="54"/>
-            <AppBarButton x:ConnectionId='19'  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
+                           Margin="0 3 0 0" Height="54"/>
+            <AppBarButton x:ConnectionId='22'  x:Name="BtnStopPauseRepeatMediaOutAsync" Label="Stop" Icon="Stop"
                                                                        
-                          Visibility="Visible" Margin="0 0 0 10" Height="54"/>
-            <ToggleSwitch x:ConnectionId='20' x:Name="TgsRepeats" Header="         Repeat" IsOn="True" Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89"/>
-            <TextBox x:ConnectionId='21' x:Name="boxRepetitions" Text="10"  Header="    Times" FontSize="12" Margin="-50,0,66,0" Height="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <TextBox x:ConnectionId='22' x:Name="boxInterval" Text="20" Header="   Intervals (Secs)" FontSize="12" Height="50" Margin="-55,0,-43,0" />
-            <MediaElement x:ConnectionId='23' x:Name="MediaElementPrompter"/>
+                          Visibility="Visible" Margin="-5 3 0 0" Height="54"/>
+            <ToggleSwitch x:ConnectionId='23' x:Name="TgsRepeats" Header="         Repeat" IsOn="True"
+                          Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left"
+                          VerticalAlignment="Top" Width="89"/>
+            <TextBox x:ConnectionId='24' x:Name="boxRepetitions" Text="10"  Header="   Times" FontSize="12"
+                     Margin="-65,0,60,0" Height="50" HorizontalAlignment="Stretch" 
+                     VerticalAlignment="Stretch"/>
+            <TextBox x:ConnectionId='25' x:Name="boxInterval" Text="8" Header="   Intrv Secs" 
+                     FontSize="12" Height="50" Margin="-55,0,0,0" />
+            <MediaElement x:ConnectionId='26' x:Name="MediaElementPrompter"/>
         </StackPanel>
 
-        <!--4th row--> <!--Grid.Row="3"-->
-        <StackPanel x:ConnectionId='7' x:Name="stpStatus" Orientation="Horizontal" 
+        <!--5th Row--> 
+        <StackPanel x:ConnectionId='8' x:Name="stpStatus" Orientation="Horizontal" Grid.Row="6"
                     Visibility="Visible" Background="Black" Height="Auto">
             <TextBlock Text="Status" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Margin="10 0 5 0"/>
-            <TextBlock x:ConnectionId='17' x:Name="tbStatus" Text="0" FontSize="12" Foreground="WhiteSmoke"
+            <TextBlock x:ConnectionId='19' x:Name="tbStatus" Text="0" FontSize="12" Foreground="WhiteSmoke"
+                    Height="Auto" Width="Auto" Margin="10 0 5 0"/>
+            <TextBlock Text="Elapsed" FontSize="12" Foreground="WhiteSmoke"
+                    Height="Auto" Margin="50 0 5 0"/>
+            <TextBlock x:ConnectionId='20' x:Name="tbElapsed" Text="0" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Width="Auto" Margin="10 0 5 0"/>
         </StackPanel>
 
-        <!--5th row--> <!--Grid.Row="4"-->
-        <StackPanel x:ConnectionId='8' x:Name="stpSpeechSettings" Orientation="Horizontal" 
-                   Height="55">
-            <ToggleSwitch x:ConnectionId='15' x:Name="VoiceSelection" Header="         Select Voice"
+        <!--6th row--> <!--Swap with TrasnportControl-->
+        <StackPanel x:ConnectionId='9' x:Name="stpSpeechSettings" Orientation="Horizontal" Grid.Row="6"
+                   Visibility="Collapsed"  Height="55">
+            <ToggleSwitch x:ConnectionId='17' x:Name="VoiceSelection" Header="         Select Voice"
                           FontSize="12"
             IsOn="{Binding UseVoiceSelection, Mode=TwoWay}"
             OffContent="Male Voice" OnContent="Female Voice" />
@@ -105,7 +123,7 @@
             <TextBlock Text="Voice Gender" FontSize="12" 
                        VerticalAlignment="Center" Margin="20 6 0 0" 
                        Visibility="Collapsed"/>
-            <ComboBox x:ConnectionId='16' x:Name="CboVoiceGender" FontSize="12" 
+            <ComboBox x:ConnectionId='18' x:Name="CboVoiceGender" FontSize="12" 
                                                                         
                       Height="27" Width="130" Margin="7 5 5 0"
                       Visibility="Collapsed">
@@ -118,38 +136,41 @@
             </ComboBox>
         </StackPanel>
 
-        <!--6th row Slider timer interval--> <!--Grid.Row="5"-->
-        <StackPanel Margin="0 10" Height="Auto"
-                    >
-            <Slider x:ConnectionId='10' x:Name="SdrSpeakAsyncProgress" 
+        <!--6th row Slider timer interval--> 
+        <StackPanel Margin="0 0" Height="Auto" Grid.Row="5"
+                    Visibility="Visible">
+            <Slider x:ConnectionId='12' x:Name="SdrSpeakAsyncProgress" 
                     Value="0"  Pivot.SlideInAnimationGroup="GroupOne"
                     TickFrequency="5"
                     Margin="5 0 5 5"
                     Visibility="Collapsed"/>
-            <AppBarButton x:ConnectionId='11' x:Name="BtnStopAsync" Label="Stop" Icon="Stop"
+            <AppBarButton x:ConnectionId='13' x:Name="BtnStopAsync" Label="Stop" Icon="Stop"
                                                                        
                           Visibility="Collapsed" Margin="0 0 0 10" Height="54"/>
-            <StackPanel x:ConnectionId='12' x:Name="stpMediaOut" Orientation="Horizontal" HorizontalAlignment="Center">
+            
+            <StackPanel x:ConnectionId='14' x:Name="stpMediaOut" Orientation="Horizontal" Grid.Row="6"
+                        HorizontalAlignment="Center"
+                        Visibility="Collapsed">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <AppBarButton x:ConnectionId='13' x:Name="BtnSpeechRecogWeatherSearch" Grid.Column="0" 
+                    <AppBarButton x:ConnectionId='15' x:Name="BtnSpeechRecogWeatherSearch" 
+                                  Grid.Column="0" 
                               Label="Weather" Icon="World"
-                              Margin="0 0 200 0"
-                             
-                              Visibility="Collapsed"/> <!--Click="BtnSpeechRecogWeatherSearchAsync_Click"-->
+                              Margin="0 0 200 0"                             
+                              Visibility="Visible"/> <!--Click="BtnSpeechRecogWeatherSearchAsync_Click"-->
 
                     <SymbolIcon Symbol="Microphone" Margin="0 0 0 0"
-                                 Visibility="Collapsed"/>
+                                 Visibility="Visible"/>
                     <SymbolIcon Symbol="Audio" Margin="100 0 0 0"
-                                 Visibility="Collapsed"/>
+                                 Visibility="Visible"/>
                     <SymbolIcon Symbol="Admin"  Margin="190 0 0 0"
-                                 Visibility="Collapsed"/>
+                                 Visibility="Visible"/>
 
-                    <Image x:ConnectionId='14' x:Name="imgSpeakerOut" Grid.Column="1"             
+                    <Image x:ConnectionId='16' x:Name="imgSpeakerOut" Grid.Column="1"             
                     Source="/Assets/Images/imgOutSoundBullHorn.png"
                     Height="50" Width="60" Margin="0 0 0 0"
                             Visibility="Collapsed"/>
@@ -161,8 +182,15 @@
         </StackPanel> 
         
         <!--60-->
-        <StackPanel x:ConnectionId='9' x:Name="stpBotBar" Grid.Row="4">
-          
+        <StackPanel x:ConnectionId='10' x:Name="stpTransPortControl" Grid.Row="7">
+            <TextBlock Text="Transport Control goes somewhere" 
+                       HorizontalAlignment="Center" Margin="0,20"/>
+
+        </StackPanel>
+        <!--60-->
+        <StackPanel x:ConnectionId='11' x:Name="stpBotBar" Grid.Row="8">
+            <TextBlock Text="Bottom Buttons" 
+                       HorizontalAlignment="Center" Margin="0,20"/>
 
         </StackPanel>
     </Grid>

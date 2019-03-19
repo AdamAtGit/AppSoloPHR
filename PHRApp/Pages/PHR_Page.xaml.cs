@@ -1,13 +1,7 @@
 ﻿using CL_UWP.SpeechClasses;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Media.SpeechRecognition;
 using Windows.Media.SpeechSynthesis;
 using Windows.Storage;
@@ -15,11 +9,7 @@ using Windows.Storage.Streams;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 namespace PHRApp.Pages
 {
     /// <summary>
@@ -27,6 +17,7 @@ namespace PHRApp.Pages
     /// </summary>
     public sealed partial class PHR_Page : Page
     {
+        #region Class member declarations
         //below line for app settings
         ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
@@ -53,7 +44,6 @@ namespace PHRApp.Pages
         {
             this.stpPlayControls.Background = new SolidColorBrush(Windows.UI.Colors.Orange);
         }
-
         private void UserControl_LostFocus(object sender, RoutedEventArgs e)
         {
             this.stpPlayControls.Background = new SolidColorBrush(Windows.UI.Colors.Ivory);
@@ -66,16 +56,15 @@ namespace PHRApp.Pages
         int i = 0;
         int repetitions;
 
-
         // Media Output Async 
         string ttsRaw = string.Empty;
-
 
         //Speech Synth and Recogn
         public string SpeechInputResult { get; set; }
 
         //Speech User Settings
         public string VoiceGender = "female";
+        #endregion
 
         public PHR_Page()
         {
@@ -103,7 +92,7 @@ namespace PHRApp.Pages
             // Debug.WriteLine("TimerSetUp: " + repeatDispTimer.IsEnabled.ToString());
         }
 
-        #region another timer with slider hooked to it.
+        #region Progress Slider 
         //async Task<int> StopTestAsync(int _reps)
         //{
         //    int reps = _reps + 1;
@@ -141,7 +130,6 @@ namespace PHRApp.Pages
         //                                    + SdrSpeakAsyncProgress.Value.ToString());
         //}
 
-
         //private async void TgbCommandModeOn_Click(object sender, RoutedEventArgs e)
         //{          
         //    TgbCommandModeOn.Foreground = new SolidColorBrush(Colors.DodgerBlue);
@@ -151,7 +139,8 @@ namespace PHRApp.Pages
         //    TgbCommandModeOn.Foreground = new SolidColorBrush(Colors.DarkOrange);
         //}
         #endregion
-        #region stop async method from https://stackoverflow.com/questions/15614991/simply-stop-an-async-method
+        #region Todo CancelAllAsync
+        //stop async method from https://stackoverflow.com/questions/15614991/simply-stop-an-async-method
         ////bool playing;
         //bool keepdoing = true;
         //int count = 10;
@@ -207,10 +196,6 @@ namespace PHRApp.Pages
             //// Debug.WriteLine("RepeatDispTimer_Tick\n" + "i = " + i.ToString());
             //// Debug.WriteLine(repeatDispTimer.IsEnabled.ToString());
             //// Debug.WriteLine(timesToTick.ToString());
-
-            //The 3rd line below fixed the 'this' null delgate etc exception
-            //cannot use this in a method call
-            //BtnRepeatMediaOutAsync_Click(this, new RoutedEventArgs());
             BtnRepeatMediaOutAsync_Click(sender, new RoutedEventArgs());
         }
 
@@ -224,33 +209,17 @@ namespace PHRApp.Pages
         }
         #endregion
 
-
         //Code Set - Interactive
         //Instantiate class outside of method.
         Interactive interactive = new Interactive();
+        InteractivePhRSets PhrSets = new InteractivePhRSets();
 
         public async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                ////**somewhere in below 4 lines are causing invalid cast exception
-                //FrameworkElement parent = (FrameworkElement)((AppBarButton)sender).Parent;
-                //MyParent = parent.Name;
-
-                //Debug.WriteLine(" MyParent = parent.Name; : " + MyParent.ToString());
-
-                //MySender = ((AppBarButton)sender).Name;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message.ToString());
-            }
+        {         
             try
             {
                 if (TgsRepeats.IsOn)
-                {
-                    //  repeatDispTimer.Tick -= RepeatDispTimer_Tick;
-                    //  TimerSetUp();
+                {                  
                     BtnRepeatMediaOutAsync.Visibility = Visibility.Collapsed;
                     BtnStopPauseRepeatMediaOutAsync.Visibility = Visibility.Visible;
                     stpStatus.Visibility = Visibility.Visible;
@@ -258,20 +227,15 @@ namespace PHRApp.Pages
 
                     SRep_Status = (i + 1).ToString();
                     IRep_Status = Convert.ToInt16((i + 1).ToString());
-                    Debug.WriteLine("Convert.ToInt16((i + 1).ToString()); \n" +
-                                             IRep_Status.ToString());
-
+                   
                     #region Code Set - Interactive                 
-                    //Below to allow what is in boxTtsRawBig to play first
                     interactive.PlName = boxTtsRawBig.Text.Trim();
-                    //Debug.WriteLine("interactive.PlName = boxTtsRawBig.Text.Trim(); \n" +
-                    //                    interactive.PlName);
+                    //Debug.WriteLine("interactive.PlName = boxTtsRawBig.Text.Trim(); \n" + interactive.PlName);                   
                     // interactive.ChangeTitle(IRep_Status, plName: interactive.PlName);
                     interactive.ChangeTitle(IRep_Status);
                     if (IRep_Status > 0)
                     {
                         boxTtsRawBig.Text = interactive.TitleName.Trim();
-
                     }
                     #endregion
 
@@ -284,18 +248,16 @@ namespace PHRApp.Pages
                         timesToTick = (repetitions - 1);
                     }
 
-                    Debug.WriteLine("\nAfter the if(1 == 0)...timesToTick = (repetitions - 1);\n" +
-                                            timesToTick.ToString());
+                   // Debug.WriteLine("\nAfter the if(1 == 0)...timesToTick = (repetitions - 1);\n" +
+                                           // timesToTick.ToString());
                     BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
                     {
                         await SpeakTextAsync(ttsRaw, MediaElementPrompter);
                     }
-                    catch (Exception ex)
-                    {
-                        Debug.WriteLine(ex.Message.ToString());
-                    }
+                    catch (Exception) { }
+
 
                     // Start Repeater Timer
                     repeatDispTimer.Start();

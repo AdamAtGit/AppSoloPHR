@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CL_UWP.SpeechClasses
 {
-    public class Interactive
+    public class InteractivePhRSets
     {
         public int RepStatus { get; set; }
         public int TitleId { get; set; }
