@@ -11,12 +11,11 @@ namespace CL_UWP.SpeechClasses
 {
     public static class PHRMediaElementExtensions
     {
-
         public static async Task PrompterPlayStreamAsync(
-      //? this MediaElement mediaElement,
-      this MediaElement mediaElement,
-      IRandomAccessStream stream,
-      bool disposeStream = true)
+        //? this MediaElement mediaElement,
+        this MediaElement mediaElement,
+        IRandomAccessStream stream,
+        bool disposeStream = true)
         {
             // bool is irrelevant here, just using this to flag task completion.
             TaskCompletionSource<bool> taskCompleted = new TaskCompletionSource<bool>();
@@ -33,7 +32,6 @@ namespace CL_UWP.SpeechClasses
             };
 
             mediaElement.MediaEnded += endOfPlayHandler;
-
             mediaElement.SetSource(stream, string.Empty);
             mediaElement.Play();
 

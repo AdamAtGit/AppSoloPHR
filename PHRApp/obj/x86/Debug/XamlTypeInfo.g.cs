@@ -189,25 +189,51 @@ namespace PHRApp.PHRApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[8];
+            _typeNameTable = new string[21];
             _typeNameTable[0] = "PHRApp.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "PHRApp.Pages.PHR_Page";
-            _typeNameTable[4] = "PHRApp.Pages.TitlesPage";
-            _typeNameTable[5] = "PHRApp.UserControls.TitlesUserControl";
-            _typeNameTable[6] = "PHRApp.Classes.Title";
-            _typeNameTable[7] = "Object";
+            _typeNameTable[3] = "PRSapp.UWP.PagesPhone.appAboutPage";
+            _typeNameTable[4] = "PRSapp.UWP.PagesPhone.AppCopyWritePage";
+            _typeNameTable[5] = "PRSapp.UWP.PagesPhone.AppCreateUserNamePage";
+            _typeNameTable[6] = "PRSapp.UWP.PagesPhone.AppDemoPage";
+            _typeNameTable[7] = "PRSapp.UWP.PagesPhone.AppHelpPage";
+            _typeNameTable[8] = "PRSapp.UWP.PagesPhone.AppProfilePage";
+            _typeNameTable[9] = "PRSapp.UWP.PagesPhone.AppResetPwdPage";
+            _typeNameTable[10] = "PRSapp.UWP.PagesPhone.AppResetUserNamePage";
+            _typeNameTable[11] = "PRSapp.UWP.PagesPhone.AppSettingsOverViewPage";
+            _typeNameTable[12] = "PRSapp.UWP.PagesPhone.App3SignInPage";
+            _typeNameTable[13] = "PRSapp.UWP.PagesPhone.AppSplashPage";
+            _typeNameTable[14] = "PHRApp.Pages.PHR_Page";
+            _typeNameTable[15] = "String";
+            _typeNameTable[16] = "Int32";
+            _typeNameTable[17] = "PHRApp.Pages.TitlesPage";
+            _typeNameTable[18] = "PHRApp.UserControls.TitlesUserControl";
+            _typeNameTable[19] = "PHRApp.Classes.Title";
+            _typeNameTable[20] = "Object";
 
-            _typeTable = new global::System.Type[8];
+            _typeTable = new global::System.Type[21];
             _typeTable[0] = typeof(global::PHRApp.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::PHRApp.Pages.PHR_Page);
-            _typeTable[4] = typeof(global::PHRApp.Pages.TitlesPage);
-            _typeTable[5] = typeof(global::PHRApp.UserControls.TitlesUserControl);
-            _typeTable[6] = typeof(global::PHRApp.Classes.Title);
-            _typeTable[7] = typeof(global::System.Object);
+            _typeTable[3] = typeof(global::PRSapp.UWP.PagesPhone.appAboutPage);
+            _typeTable[4] = typeof(global::PRSapp.UWP.PagesPhone.AppCopyWritePage);
+            _typeTable[5] = typeof(global::PRSapp.UWP.PagesPhone.AppCreateUserNamePage);
+            _typeTable[6] = typeof(global::PRSapp.UWP.PagesPhone.AppDemoPage);
+            _typeTable[7] = typeof(global::PRSapp.UWP.PagesPhone.AppHelpPage);
+            _typeTable[8] = typeof(global::PRSapp.UWP.PagesPhone.AppProfilePage);
+            _typeTable[9] = typeof(global::PRSapp.UWP.PagesPhone.AppResetPwdPage);
+            _typeTable[10] = typeof(global::PRSapp.UWP.PagesPhone.AppResetUserNamePage);
+            _typeTable[11] = typeof(global::PRSapp.UWP.PagesPhone.AppSettingsOverViewPage);
+            _typeTable[12] = typeof(global::PRSapp.UWP.PagesPhone.App3SignInPage);
+            _typeTable[13] = typeof(global::PRSapp.UWP.PagesPhone.AppSplashPage);
+            _typeTable[14] = typeof(global::PHRApp.Pages.PHR_Page);
+            _typeTable[15] = typeof(global::System.String);
+            _typeTable[16] = typeof(global::System.Int32);
+            _typeTable[17] = typeof(global::PHRApp.Pages.TitlesPage);
+            _typeTable[18] = typeof(global::PHRApp.UserControls.TitlesUserControl);
+            _typeTable[19] = typeof(global::PHRApp.Classes.Title);
+            _typeTable[20] = typeof(global::System.Object);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -243,10 +269,21 @@ namespace PHRApp.PHRApp_XamlTypeInfo
         }
 
         private object Activate_0_MainPage() { return new global::PHRApp.MainPage(); }
-        private object Activate_3_PHR_Page() { return new global::PHRApp.Pages.PHR_Page(); }
-        private object Activate_4_TitlesPage() { return new global::PHRApp.Pages.TitlesPage(); }
-        private object Activate_5_TitlesUserControl() { return new global::PHRApp.UserControls.TitlesUserControl(); }
-        private object Activate_6_Title() { return new global::PHRApp.Classes.Title(); }
+        private object Activate_3_appAboutPage() { return new global::PRSapp.UWP.PagesPhone.appAboutPage(); }
+        private object Activate_4_AppCopyWritePage() { return new global::PRSapp.UWP.PagesPhone.AppCopyWritePage(); }
+        private object Activate_5_AppCreateUserNamePage() { return new global::PRSapp.UWP.PagesPhone.AppCreateUserNamePage(); }
+        private object Activate_6_AppDemoPage() { return new global::PRSapp.UWP.PagesPhone.AppDemoPage(); }
+        private object Activate_7_AppHelpPage() { return new global::PRSapp.UWP.PagesPhone.AppHelpPage(); }
+        private object Activate_8_AppProfilePage() { return new global::PRSapp.UWP.PagesPhone.AppProfilePage(); }
+        private object Activate_9_AppResetPwdPage() { return new global::PRSapp.UWP.PagesPhone.AppResetPwdPage(); }
+        private object Activate_10_AppResetUserNamePage() { return new global::PRSapp.UWP.PagesPhone.AppResetUserNamePage(); }
+        private object Activate_11_AppSettingsOverViewPage() { return new global::PRSapp.UWP.PagesPhone.AppSettingsOverViewPage(); }
+        private object Activate_12_App3SignInPage() { return new global::PRSapp.UWP.PagesPhone.App3SignInPage(); }
+        private object Activate_13_AppSplashPage() { return new global::PRSapp.UWP.PagesPhone.AppSplashPage(); }
+        private object Activate_14_PHR_Page() { return new global::PHRApp.Pages.PHR_Page(); }
+        private object Activate_17_TitlesPage() { return new global::PHRApp.Pages.TitlesPage(); }
+        private object Activate_18_TitlesUserControl() { return new global::PHRApp.UserControls.TitlesUserControl(); }
+        private object Activate_19_Title() { return new global::PHRApp.Classes.Title(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -273,36 +310,127 @@ namespace PHRApp.PHRApp_XamlTypeInfo
                 xamlType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  PHRApp.Pages.PHR_Page
+            case 3:   //  PRSapp.UWP.PagesPhone.appAboutPage
                 userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_PHR_Page;
+                userType.Activator = Activate_3_appAboutPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  PHRApp.Pages.TitlesPage
+            case 4:   //  PRSapp.UWP.PagesPhone.AppCopyWritePage
                 userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_TitlesPage;
+                userType.Activator = Activate_4_AppCopyWritePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  PHRApp.UserControls.TitlesUserControl
+            case 5:   //  PRSapp.UWP.PagesPhone.AppCreateUserNamePage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_AppCreateUserNamePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  PRSapp.UWP.PagesPhone.AppDemoPage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_AppDemoPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  PRSapp.UWP.PagesPhone.AppHelpPage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_AppHelpPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  PRSapp.UWP.PagesPhone.AppProfilePage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_AppProfilePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 9:   //  PRSapp.UWP.PagesPhone.AppResetPwdPage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_AppResetPwdPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  PRSapp.UWP.PagesPhone.AppResetUserNamePage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_AppResetUserNamePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  PRSapp.UWP.PagesPhone.AppSettingsOverViewPage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_AppSettingsOverViewPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  PRSapp.UWP.PagesPhone.App3SignInPage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_App3SignInPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  PRSapp.UWP.PagesPhone.AppSplashPage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_13_AppSplashPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 14:   //  PHRApp.Pages.PHR_Page
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_14_PHR_Page;
+                userType.AddMemberName("CurrentUserName");
+                userType.AddMemberName("CurrentUserId");
+                userType.AddMemberName("SelectedTitleId");
+                userType.AddMemberName("EditTitleId");
+                userType.AddMemberName("DeleteTitleId");
+                userType.AddMemberName("SpeechInputResult");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 15:   //  String
+                xamlType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 16:   //  Int32
+                xamlType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 17:   //  PHRApp.Pages.TitlesPage
+                userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_17_TitlesPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 18:   //  PHRApp.UserControls.TitlesUserControl
                 userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_5_TitlesUserControl;
+                userType.Activator = Activate_18_TitlesUserControl;
                 userType.AddMemberName("Title");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  PHRApp.Classes.Title
+            case 19:   //  PHRApp.Classes.Title
                 userType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  Object
+            case 20:   //  Object
                 xamlType = new global::PHRApp.PHRApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -310,12 +438,72 @@ namespace PHRApp.PHRApp_XamlTypeInfo
         }
 
 
-        private object get_0_TitlesUserControl_Title(object instance)
+        private object get_0_PHR_Page_CurrentUserName(object instance)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            return that.CurrentUserName;
+        }
+        private void set_0_PHR_Page_CurrentUserName(object instance, object Value)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            that.CurrentUserName = (global::System.String)Value;
+        }
+        private object get_1_PHR_Page_CurrentUserId(object instance)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            return that.CurrentUserId;
+        }
+        private void set_1_PHR_Page_CurrentUserId(object instance, object Value)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            that.CurrentUserId = (global::System.Int32)Value;
+        }
+        private object get_2_PHR_Page_SelectedTitleId(object instance)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            return that.SelectedTitleId;
+        }
+        private void set_2_PHR_Page_SelectedTitleId(object instance, object Value)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            that.SelectedTitleId = (global::System.Int32)Value;
+        }
+        private object get_3_PHR_Page_EditTitleId(object instance)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            return that.EditTitleId;
+        }
+        private void set_3_PHR_Page_EditTitleId(object instance, object Value)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            that.EditTitleId = (global::System.Int32)Value;
+        }
+        private object get_4_PHR_Page_DeleteTitleId(object instance)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            return that.DeleteTitleId;
+        }
+        private void set_4_PHR_Page_DeleteTitleId(object instance, object Value)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            that.DeleteTitleId = (global::System.Int32)Value;
+        }
+        private object get_5_PHR_Page_SpeechInputResult(object instance)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            return that.SpeechInputResult;
+        }
+        private void set_5_PHR_Page_SpeechInputResult(object instance, object Value)
+        {
+            var that = (global::PHRApp.Pages.PHR_Page)instance;
+            that.SpeechInputResult = (global::System.String)Value;
+        }
+        private object get_6_TitlesUserControl_Title(object instance)
         {
             var that = (global::PHRApp.UserControls.TitlesUserControl)instance;
             return that.Title;
         }
-        private void set_0_TitlesUserControl_Title(object instance, object Value)
+        private void set_6_TitlesUserControl_Title(object instance, object Value)
         {
             var that = (global::PHRApp.UserControls.TitlesUserControl)instance;
             that.Title = (global::PHRApp.Classes.Title)Value;
@@ -328,11 +516,47 @@ namespace PHRApp.PHRApp_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "PHRApp.Pages.PHR_Page.CurrentUserName":
+                userType = (global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PHRApp.Pages.PHR_Page");
+                xamlMember = new global::PHRApp.PHRApp_XamlTypeInfo.XamlMember(this, "CurrentUserName", "String");
+                xamlMember.Getter = get_0_PHR_Page_CurrentUserName;
+                xamlMember.Setter = set_0_PHR_Page_CurrentUserName;
+                break;
+            case "PHRApp.Pages.PHR_Page.CurrentUserId":
+                userType = (global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PHRApp.Pages.PHR_Page");
+                xamlMember = new global::PHRApp.PHRApp_XamlTypeInfo.XamlMember(this, "CurrentUserId", "Int32");
+                xamlMember.Getter = get_1_PHR_Page_CurrentUserId;
+                xamlMember.Setter = set_1_PHR_Page_CurrentUserId;
+                break;
+            case "PHRApp.Pages.PHR_Page.SelectedTitleId":
+                userType = (global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PHRApp.Pages.PHR_Page");
+                xamlMember = new global::PHRApp.PHRApp_XamlTypeInfo.XamlMember(this, "SelectedTitleId", "Int32");
+                xamlMember.Getter = get_2_PHR_Page_SelectedTitleId;
+                xamlMember.Setter = set_2_PHR_Page_SelectedTitleId;
+                break;
+            case "PHRApp.Pages.PHR_Page.EditTitleId":
+                userType = (global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PHRApp.Pages.PHR_Page");
+                xamlMember = new global::PHRApp.PHRApp_XamlTypeInfo.XamlMember(this, "EditTitleId", "Int32");
+                xamlMember.Getter = get_3_PHR_Page_EditTitleId;
+                xamlMember.Setter = set_3_PHR_Page_EditTitleId;
+                break;
+            case "PHRApp.Pages.PHR_Page.DeleteTitleId":
+                userType = (global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PHRApp.Pages.PHR_Page");
+                xamlMember = new global::PHRApp.PHRApp_XamlTypeInfo.XamlMember(this, "DeleteTitleId", "Int32");
+                xamlMember.Getter = get_4_PHR_Page_DeleteTitleId;
+                xamlMember.Setter = set_4_PHR_Page_DeleteTitleId;
+                break;
+            case "PHRApp.Pages.PHR_Page.SpeechInputResult":
+                userType = (global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PHRApp.Pages.PHR_Page");
+                xamlMember = new global::PHRApp.PHRApp_XamlTypeInfo.XamlMember(this, "SpeechInputResult", "String");
+                xamlMember.Getter = get_5_PHR_Page_SpeechInputResult;
+                xamlMember.Setter = set_5_PHR_Page_SpeechInputResult;
+                break;
             case "PHRApp.UserControls.TitlesUserControl.Title":
                 userType = (global::PHRApp.PHRApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PHRApp.UserControls.TitlesUserControl");
                 xamlMember = new global::PHRApp.PHRApp_XamlTypeInfo.XamlMember(this, "Title", "PHRApp.Classes.Title");
-                xamlMember.Getter = get_0_TitlesUserControl_Title;
-                xamlMember.Setter = set_0_TitlesUserControl_Title;
+                xamlMember.Getter = get_6_TitlesUserControl_Title;
+                xamlMember.Setter = set_6_TitlesUserControl_Title;
                 break;
             }
             return xamlMember;

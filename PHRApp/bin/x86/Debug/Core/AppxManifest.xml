@@ -21,6 +21,10 @@
   </Dependencies>
   <Resources>
     <Resource Language="EN-US" />
+    <Resource Language="EN-ES" />
+    <Resource Language="ES-MX" />
+    <Resource Language="IT" />
+    <Resource Language="RU-RU" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="PHRApp.exe" EntryPoint="PHRApp.App">

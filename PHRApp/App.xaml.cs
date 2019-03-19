@@ -71,10 +71,6 @@ namespace PHRApp
                     db.CreateTable<Classes.PlayList>();
                 }
 
-
-
-
-
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }

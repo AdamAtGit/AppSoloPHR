@@ -108,6 +108,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpeechClasses\AudioCapturePermissions.cs" />
+    <Compile Include="SpeechClasses\Interactive.cs" />
+    <Compile Include="SpeechClasses\InteractiveResponses.cs" />
     <Compile Include="SpeechClasses\PHRMediaElementExtensions.cs" />
     <EmbeddedResource Include="Properties\CL_UWP.rd.xml" />
   </ItemGroup>
