@@ -351,6 +351,9 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "sqlite-net/1.0.8": {
+        "type": "package"
+      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -2831,6 +2834,9 @@
           "runtimes/win8-arm/native/clrcompression.dll": {}
         }
       },
+      "sqlite-net/1.0.8": {
+        "type": "package"
+      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -5176,6 +5182,9 @@
           "runtimes/win8-arm-aot/native/_._": {}
         }
       },
+      "sqlite-net/1.0.8": {
+        "type": "package"
+      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -7169,6 +7178,9 @@
         "runtime": {
           "lib/netstandard1.0/_._": {}
         }
+      },
+      "sqlite-net/1.0.8": {
+        "type": "package"
       },
       "System.AppContext/4.1.0": {
         "type": "package",
@@ -9424,6 +9436,9 @@
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
+      },
+      "sqlite-net/1.0.8": {
+        "type": "package"
       },
       "System.AppContext/4.1.0": {
         "type": "package",
@@ -11779,6 +11794,9 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
+      "sqlite-net/1.0.8": {
+        "type": "package"
+      },
       "System.AppContext/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -14096,6 +14114,9 @@
         "runtime": {
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
+      },
+      "sqlite-net/1.0.8": {
+        "type": "package"
       },
       "System.AppContext/4.1.0": {
         "type": "package",
@@ -16450,6 +16471,9 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
+      },
+      "sqlite-net/1.0.8": {
+        "type": "package"
       },
       "System.AppContext/4.1.0": {
         "type": "package",
@@ -22850,6 +22874,17 @@
         "runtimes/win8-arm/native/clrcompression.dll"
       ]
     },
+    "sqlite-net/1.0.8": {
+      "sha512": "gJXHCj1gSTPTYzL9oJevih+JwF9EUnt/EO2ccnTLDBtYeVDCIRXPdTSBokSWL7mjNIDnOcpB1zAuC9Qg9YAgAg==",
+      "type": "package",
+      "path": "sqlite-net/1.0.8",
+      "files": [
+        "content/SQLite.cs",
+        "content/SQLiteAsync.cs",
+        "sqlite-net.1.0.8.nupkg.sha512",
+        "sqlite-net.nuspec"
+      ]
+    },
     "System.AppContext/4.1.0": {
       "sha512": "3QjO4jNV7PdKkmQAVp9atA+usVnKRwI3Kx1nMwJ93T0LcQfx7pKAYk0nKz5wn1oP5iqlhZuy6RXOFdhr7rDwow==",
       "type": "package",
@@ -27607,7 +27642,8 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.15063": [
       "CL_UWP >= 1.0.0",
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.9"
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.9",
+      "sqlite-net >= 1.0.8"
     ]
   },
   "packageFolders": {
@@ -27654,6 +27690,10 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.1.9, )"
+          },
+          "sqlite-net": {
+            "target": "Package",
+            "version": "[1.0.8, )"
           }
         }
       }

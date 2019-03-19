@@ -63,12 +63,12 @@ namespace PHRApp
                     //TODO: Load state from previously suspended application
                 }
 
-                DBPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "prsapp15.sqlite");
+                DBPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "prsapp.sqlite");
 
                 using (var db = new SQLite.SQLiteConnection(dbPath))
                 {
-                   // db.CreateTable<Classes.Title>();
-                   // db.CreateTable<Classes.PlayList>();
+                    db.CreateTable<Classes.Title>();
+                    db.CreateTable<Classes.PlayList>();
                 }
 
 

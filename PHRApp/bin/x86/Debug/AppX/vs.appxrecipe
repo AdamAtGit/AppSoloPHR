@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>31D64797102CC9A26D19B273B323B3772D4BB616B6424DE6D77E8BFD19C84018</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>63024820472F001CFCD484EA512840A17D25A387353BD81C4DA7D8081F41D783</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>98dad7f0-258a-4f56-abe8-3ec7e1698d45_1.0.0.0_x86__hx0hhj90qcway</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>98dad7f0-258a-4f56-abe8-3ec7e1698d45_hx0hhj90qcway!App</RegisteredUserModeAppID>
     <RegisteredPackageID>98dad7f0-258a-4f56-abe8-3ec7e1698d45</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-18T20:09:32.058</Modified>
+      <Modified>2019-03-18T23:53:07.692</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PHRApp.exe">
       <PackagePath>entrypoint\PHRApp.exe</PackagePath>
-      <Modified>2019-03-18T20:09:23.107</Modified>
+      <Modified>2019-03-18T23:53:05.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,6 +495,14 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-12T03:15:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\CL_UWP\bin\x86\Debug\CL_UWP.dll">
+      <PackagePath>CL_UWP.dll</PackagePath>
+      <Modified>2019-03-18T23:16:24.383</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.25.3\Redist\Debug\x86\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2018-11-15T09:12:17.602</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2019-03-18T19:16:54.077</Modified>
@@ -535,19 +543,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PHRApp.xr.xml">
       <PackagePath>PHRApp.xr.xml</PackagePath>
-      <Modified>2019-03-18T20:09:22.174</Modified>
+      <Modified>2019-03-18T23:15:36.095</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-18T20:09:22.565</Modified>
+      <Modified>2019-03-18T23:53:04.972</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-18T20:09:22.566</Modified>
+      <Modified>2019-03-18T23:53:04.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Pages\PHR_Page.xbf">
       <PackagePath>Pages\PHR_Page.xbf</PackagePath>
-      <Modified>2019-03-18T20:09:22.568</Modified>
+      <Modified>2019-03-18T23:53:04.973</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Pages\TitlesPage.xbf">
+      <PackagePath>Pages\TitlesPage.xbf</PackagePath>
+      <Modified>2019-03-18T23:53:04.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\UserControls\TitlesUserControl.xbf">
+      <PackagePath>UserControls\TitlesUserControl.xbf</PackagePath>
+      <Modified>2019-03-18T23:53:04.974</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -556,11 +572,11 @@
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-18T19:32:29.535</Modified>
+      <Modified>2019-03-18T23:53:07.018</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Core\PHRApp.exe">
       <PackagePath>PHRApp.exe</PackagePath>
-      <Modified>2019-03-18T20:09:31.938</Modified>
+      <Modified>2019-03-18T23:53:07.673</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
