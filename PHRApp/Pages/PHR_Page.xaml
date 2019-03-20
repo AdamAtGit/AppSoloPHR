@@ -102,13 +102,17 @@
         <!--5th Row--> 
         <StackPanel x:Name="stpStatus" Orientation="Horizontal" Grid.Row="6"
                     Visibility="Visible" Background="Black" Height="Auto">
-            <TextBlock Text="Status" FontSize="12" Foreground="WhiteSmoke"
+            <TextBlock Text="Status   Set " FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Margin="10 0 5 0"/>
             <TextBlock x:Name="tbStatus" Text="0" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Width="Auto" Margin="10 0 5 0"/>
             <TextBlock Text="Elapsed" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Margin="50 0 5 0"/>
             <TextBlock x:Name="tbElapsed" Text="0" FontSize="12" Foreground="WhiteSmoke"
+                    Height="Auto" Width="Auto" Margin="10 0 5 0"/>
+            <TextBlock Text="TotalTime" FontSize="12" Foreground="WhiteSmoke"
+                    Height="Auto" Margin="50 0 5 0"/>
+            <TextBlock x:Name="tbTotalTime" Text="0" FontSize="12" Foreground="WhiteSmoke"
                     Height="Auto" Width="Auto" Margin="10 0 5 0"/>
         </StackPanel>
 

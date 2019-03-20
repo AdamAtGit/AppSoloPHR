@@ -10,6 +10,9 @@ using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
+
+
+
 namespace PHRApp.Pages
 {
     /// <summary>
@@ -51,10 +54,15 @@ namespace PHRApp.Pages
 
         // Repeater Dispatcher Timer
         DispatcherTimer repeatDispTimer = new DispatcherTimer();
-        TimeSpan interval;//hh, mm, ss
+        Int32 LeadTime, LagTime;
+        static int SetCounter;
+        TimeSpan TsInterval;
+        static TimeSpan TsElapsed;
+        static TimeSpan TsTotalTime;//hh, mm, ss
+       
         int timesToTick;
         int i = 0;
-        int repetitions;
+        int Repetitions;
 
         // Media Output Async 
         string ttsRaw = string.Empty;
@@ -82,6 +90,13 @@ namespace PHRApp.Pages
             // Wire up Add Title Save Changes Async to ORMs
             //btnAddTitleBigAsync.Click += new RoutedEventHandler(AddTitleBigAsync_Click);
 
+            //Initialize values- LeadTime before first PHRSet, LagTime for between Sets
+            LeadTime = 3;
+            SetCounter = 0;
+            LagTime = 5;
+            TsElapsed = new TimeSpan(0,0, LeadTime);
+            TsTotalTime = new TimeSpan(0, 0, 0);
+           
             TimerSetUp();
             CboVoiceGender.SelectedIndex = CboVoiceGender.Items.Count - 1;
         }
@@ -89,7 +104,6 @@ namespace PHRApp.Pages
         public void TimerSetUp()
         {
             repeatDispTimer.Tick += RepeatDispTimer_Tick;
-            // Debug.WriteLine("TimerSetUp: " + repeatDispTimer.IsEnabled.ToString());
         }
 
         #region Progress Slider 
@@ -192,10 +206,7 @@ namespace PHRApp.Pages
         #endregion
 
         private void RepeatDispTimer_Tick(object sender, object e)
-        {
-            //// Debug.WriteLine("RepeatDispTimer_Tick\n" + "i = " + i.ToString());
-            //// Debug.WriteLine(repeatDispTimer.IsEnabled.ToString());
-            //// Debug.WriteLine(timesToTick.ToString());
+        {        
             BtnRepeatMediaOutAsync_Click(sender, new RoutedEventArgs());
         }
 
@@ -214,20 +225,43 @@ namespace PHRApp.Pages
         Interactive interactive = new Interactive();
         InteractivePhRSets PhrSets = new InteractivePhRSets();
 
+        public static TimeSpan AdjustForTaskRunTime(TimeSpan tsInterval, TimeSpan tsElapsed, int reps, out TimeSpan tsTotalTime)
+        {
+           
+            TimeSpan tsAdjustedInterval = new TimeSpan(0, 0, 0);
+            TsElapsed = tsElapsed;
+            Debug.WriteLine("TsElapsed: " + TsElapsed.ToString());
+            tsAdjustedInterval = tsInterval.Add(TsElapsed);
+           
+            Debug.WriteLine("______ Set " + SetCounter + " ________");
+            Debug.WriteLine("tsInterval: " + tsInterval.TotalSeconds.ToString());
+            Debug.WriteLine("TsElapsed: " + TsElapsed.TotalSeconds.ToString());
+            Debug.WriteLine("tsAdjustedInterval: " + tsAdjustedInterval.TotalSeconds.ToString());
+           
+            tsTotalTime = TsTotalTime.Add(tsAdjustedInterval);
+            Debug.WriteLine("______ PlayList TotalTime: " +  tsTotalTime.ToString() + " ________\n");
+
+            SetCounter++;
+
+            return tsAdjustedInterval;            
+        }
+
         public async void BtnRepeatMediaOutAsync_Click(object sender, RoutedEventArgs e)
-        {         
+        {
             try
             {
                 if (TgsRepeats.IsOn)
-                {                  
+                {       
+                    #region Visible, Drawing, Rotating
                     BtnRepeatMediaOutAsync.Visibility = Visibility.Collapsed;
                     BtnStopPauseRepeatMediaOutAsync.Visibility = Visibility.Visible;
                     stpStatus.Visibility = Visibility.Visible;
+                    #endregion
+                    #region Status
                     tbStatus.Text = (i + 1).ToString();
-
                     SRep_Status = (i + 1).ToString();
                     IRep_Status = Convert.ToInt16((i + 1).ToString());
-                   
+                    #endregion
                     #region Code Set - Interactive                 
                     interactive.PlName = boxTtsRawBig.Text.Trim();
                     //Debug.WriteLine("interactive.PlName = boxTtsRawBig.Text.Trim(); \n" + interactive.PlName);                   
@@ -236,33 +270,40 @@ namespace PHRApp.Pages
                     if (IRep_Status > 0)
                     {
                         boxTtsRawBig.Text = interactive.TitleName.Trim();
+                       
+                        TsInterval = AdjustForTaskRunTime(TsInterval, PhRTiming.TsElapsed, Repetitions, out TsTotalTime);
                     }
                     #endregion
-
-                    repetitions = Convert.ToInt32(boxRepetitions.Text.Trim());
+                    Repetitions = Convert.ToInt32(boxRepetitions.Text.Trim());
                     if (i == 0)
                     {
                         int intervalInSecs = Convert.ToInt32(boxInterval.Text.Trim());
-                        interval = new TimeSpan(0, 0, intervalInSecs);
-                        repeatDispTimer.Interval = interval;
-                        timesToTick = (repetitions - 1);
+                        TsInterval = new TimeSpan(0, 0, intervalInSecs);
+                        TsInterval = AdjustForTaskRunTime(TsInterval, PhRTiming.TsElapsed, Repetitions, out TsTotalTime);
+                        repeatDispTimer.Interval = TsInterval;
+                        timesToTick = (Repetitions - 1);
+                    }
+                    //Increment Status
+                    tbElapsed.Text = PhRTiming.TsElapsed.Seconds.ToString();
+                    tbTotalTime.Text = TsTotalTime.Seconds.ToString();
+                    if (i > 0 && i <= IRep_Status)
+                    {
+                        Debug.WriteLine("Hit if(i > 0 && i <= IRep_Status)");
+                        Debug.Write(i.ToString() + " > 0 && " + i.ToString() + " <= " + IRep_Status.ToString() + "\n\n");
                     }
 
-                   // Debug.WriteLine("\nAfter the if(1 == 0)...timesToTick = (repetitions - 1);\n" +
-                                           // timesToTick.ToString());
-                    BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
+                    // Debug.WriteLine("\nAfter the if(1 == 0)...timesToTick = (repetitions - 1);\n" +
+                    // timesToTick.ToString());
+                    //BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
                     {
                         await SpeakTextAsync(ttsRaw, MediaElementPrompter);
                     }
                     catch (Exception) { }
-
-
+                    
                     // Start Repeater Timer
                     repeatDispTimer.Start();
-                    //// Debug.WriteLine("BtnRepeatMediaOutAsync_Click " + timesToTick.ToString());
-                    //// Debug.WriteLine("i = " + i.ToString());
 
                     // Stop timer when reps are complete
                     i++;
@@ -270,18 +311,15 @@ namespace PHRApp.Pages
                     {
                         tbStatus.Text = "0";
                         repeatDispTimer.Stop();
-                        //  repeatDispTimer.Tick -= RepeatDispTimer_Tick;
                         BtnStopPauseRepeatMediaOutAsync.Visibility = Visibility.Collapsed;
                         BtnRepeatMediaOutAsync.Visibility = Visibility.Visible;
                         BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
                         stpStatus.Visibility = Visibility.Collapsed;
                         i = 0;
                     }
-                    //// Debug.WriteLine(repeatDispTimer.IsEnabled.ToString());
                 }
                 else
-                {
-                    //Debug.Write("Hit tgsReapeats.IsOn//when is false");
+                {                  
                     BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
@@ -294,7 +332,6 @@ namespace PHRApp.Pages
                     }
                 }
             }
-
             catch (Exception ex)
             {
                 ex.Message.ToString();
@@ -370,18 +407,17 @@ namespace PHRApp.Pages
             // Windows.Media.SpeechSynthesis.SpeechSynthesizer
             using (SpeechSynthesizer synthesizer = new SpeechSynthesizer())
             {
+                #region TODO: speech user settings
                 //// Select the US English voice.
                 //if (VoiceGender == "female")
                 //{
-
                 //   // synthesizer.Voice.Gender.voi = Windows.Media.SpeechSynthesis.VoiceGender.Female;
                 //    synthesizer.Options.AudioVolume = 100;
                 //}
 
                 //Volume Setting
                 //synthesizer.Options.AudioVolume = +100;
-
-                // Windows.Media.SpeechSynthesis.SpeechSynthesisStream
+                #endregion
                 stream = await synthesizer.SynthesizeTextToStreamAsync(text);
             }
             return (stream);
@@ -389,30 +425,18 @@ namespace PHRApp.Pages
 
         async Task SpeakTextAsync(string text, MediaElement mediaElement)
         {
-
             //TODO: ARS use link below to stop async tasks
             //https://stackoverflow.com/questions/15614991/simply-stop-an-async-method
-
-            //if(TgsRepeats.IsOn)
-            //{
-            //    BtnStopPauseRepeatMediaOutAsync.Visibility = Visibility.Visible;
-            //    BtnRepeatMediaOutAsync.Visibility = Visibility.Collapsed;
-            //    stpStatus.Visibility = Visibility.Visible;
-            //}
-            //   IRandomAccessStream stream = await this.SynthesizeTextToSpeechAsync(text);
             IRandomAccessStream stream = await SynthesizeTextToSpeechAsync(text);
 
             await mediaElement.PrompterPlayStreamAsync(stream, true);
-
         }
         #endregion
-
-        #region User Speech Settings
+        #region User Speech Gender Settings
         private void CboVoiceGender_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             VoiceGender = CboVoiceGender.SelectedValue.ToString();
         }
-        #endregion
-        
+        #endregion       
     }
 }

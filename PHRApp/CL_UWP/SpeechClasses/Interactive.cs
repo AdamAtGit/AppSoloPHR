@@ -58,7 +58,7 @@ namespace CL_UWP.SpeechClasses
                             //10 - Speed - Tell them you had fun as soon as done, so you don't seem needy incase you want upper hand to see them again.
                             return;
                         case 2:
-                            TitleName = "Say IB 2";
+                            TitleName = "Say IB 2, This should take up at least four, seconds. Hipples Maggie";
                             return;
                         case 3:
                             TitleName = "Say IB 3";

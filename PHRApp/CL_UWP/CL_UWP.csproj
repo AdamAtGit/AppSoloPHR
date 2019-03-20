@@ -113,6 +113,7 @@
     <Compile Include="SpeechClasses\Interactive.cs" />
     <Compile Include="SpeechClasses\InteractiveResponses.cs" />
     <Compile Include="SpeechClasses\PHRMediaElementExtensions.cs" />
+    <Compile Include="SpeechClasses\PhRTiming.cs" />
     <EmbeddedResource Include="Properties\CL_UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>

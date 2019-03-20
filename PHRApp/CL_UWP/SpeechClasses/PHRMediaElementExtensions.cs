@@ -10,17 +10,25 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace CL_UWP.SpeechClasses
-{
-   
+{ 
+    //public static class PhrTiming
+    //{     
+      
+    //    private static TimeSpan tsElapsed;
+    //    public static TimeSpan TsElapsed
+    //    {
+    //        get { return tsElapsed; }
+    //        set { tsElapsed = value; }
+    //    }
+    //}
+
     public static class PHRMediaElementExtensions
-    {
-        public static object MediaElement { get; internal set; }
-        public static async Task PrompterPlayStreamAsync(
-          //? this MediaElement mediaElement,
+    {       
+          public static async Task PrompterPlayStreamAsync(
           this MediaElement mediaElement,
           IRandomAccessStream stream,
           bool disposeStream = true)
-        {
+          {
             // bool is irrelevant here, just using this to flag task completion.
             TaskCompletionSource<bool> taskCompleted = new TaskCompletionSource<bool>();
 
@@ -56,10 +64,13 @@ namespace CL_UWP.SpeechClasses
             //}
             #endregion
             //Code-Set Get Amount of time takes for Async Task - await takes
+            //PhrTiming phrTiming = new PhrTiming();
+            
             Int32 secs = 0;
             Int32 secs2 = 0;
-            TimeSpan tsCombinedSecs = new TimeSpan(0, 0, secs);
+            PhRTiming.TsElapsed = new TimeSpan(0, 0, secs);
             var sw = new Stopwatch();
+            
             sw.Start();
             try
             {
@@ -71,9 +82,15 @@ namespace CL_UWP.SpeechClasses
             try
             {
                 sw.Stop();
-                TimeSpan tsElapsedSecs = sw.Elapsed;
-                Debug.WriteLine("Elapsed Secs: " + tsElapsedSecs.Seconds.ToString());
-                Debug.WriteLine("Elapsed Secs: " + tsElapsedSecs.TotalSeconds.ToString());
+                PhRTiming.TsElapsed = sw.Elapsed;
+                Debug.WriteLine("sw.Elapsed before Rest: " + sw.Elapsed.ToString());
+
+                sw.Reset();
+               // PhrTiming.TsElapsed = sw.Elapsed;
+                Debug.WriteLine("sw.Elapsed after Rest: " + sw.Elapsed.ToString());
+
+                Debug.WriteLine("\n\nElapsed Seconds: " + PhRTiming.TsElapsed.Seconds.ToString());
+                Debug.WriteLine("Elapsed TotalSeconds: " + PhRTiming.TsElapsed.TotalSeconds.ToString());
                 double secsElapsed = sw.Elapsed.TotalSeconds;
                // Debug.WriteLine("\ndouble secsElapsed = sw.Elapsed.TotalSeconds; : " + secsElapsed.ToString());
             }
