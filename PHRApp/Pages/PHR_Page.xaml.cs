@@ -313,13 +313,13 @@ namespace PHRApp.Pages
                         repeatDispTimer.Stop();
                         BtnStopPauseRepeatMediaOutAsync.Visibility = Visibility.Collapsed;
                         BtnRepeatMediaOutAsync.Visibility = Visibility.Visible;
-                        BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Black);
+                        BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
                         stpStatus.Visibility = Visibility.Collapsed;
                         i = 0;
                     }
                 }
                 else
-                {                  
+                {    //This condition is if TsReats.IsOn = false              
                     BtnRepeatMediaOutAsync.Foreground = new SolidColorBrush(Windows.UI.Colors.Orange);
                     ttsRaw = boxTtsRawBig.Text.Trim();
                     try
@@ -428,8 +428,10 @@ namespace PHRApp.Pages
             //TODO: ARS use link below to stop async tasks
             //https://stackoverflow.com/questions/15614991/simply-stop-an-async-method
             IRandomAccessStream stream = await SynthesizeTextToSpeechAsync(text);
-
+            //here try stoping timer
+            repeatDispTimer.Stop();
             await mediaElement.PrompterPlayStreamAsync(stream, true);
+            repeatDispTimer.Start();
         }
         #endregion
         #region User Speech Gender Settings

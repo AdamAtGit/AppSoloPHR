@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-20T06:00:34.186</Modified>
+      <Modified>2019-03-20T09:14:25.415</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PHRApp.exe">
       <PackagePath>entrypoint\PHRApp.exe</PackagePath>
-      <Modified>2019-03-20T06:00:32.869</Modified>
+      <Modified>2019-03-20T09:14:24.519</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -497,7 +497,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\CL_UWP\bin\x86\Debug\CL_UWP.dll">
       <PackagePath>CL_UWP.dll</PackagePath>
-      <Modified>2019-03-20T05:37:08.410</Modified>
+      <Modified>2019-03-20T09:14:19.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.25.3\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -1337,67 +1337,67 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.442</Modified>
+      <Modified>2019-03-20T09:14:23.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.443</Modified>
+      <Modified>2019-03-20T09:14:23.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppAboutPage.xbf">
       <PackagePath>PagesPhone\AppAboutPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.444</Modified>
+      <Modified>2019-03-20T09:14:23.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppCopyWritePage.xbf">
       <PackagePath>PagesPhone\AppCopyWritePage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.444</Modified>
+      <Modified>2019-03-20T09:14:23.953</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppCreateUserNamePage.xbf">
       <PackagePath>PagesPhone\AppCreateUserNamePage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.445</Modified>
+      <Modified>2019-03-20T09:14:23.954</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppDemoPage.xbf">
       <PackagePath>PagesPhone\AppDemoPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.446</Modified>
+      <Modified>2019-03-20T09:14:23.954</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppHelpPage.xbf">
       <PackagePath>PagesPhone\AppHelpPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.446</Modified>
+      <Modified>2019-03-20T09:14:23.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppProfilePage.xbf">
       <PackagePath>PagesPhone\AppProfilePage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.447</Modified>
+      <Modified>2019-03-20T09:14:23.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppResetPwdPage.xbf">
       <PackagePath>PagesPhone\AppResetPwdPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.448</Modified>
+      <Modified>2019-03-20T09:14:23.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppResetUserNamePage.xbf">
       <PackagePath>PagesPhone\AppResetUserNamePage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.449</Modified>
+      <Modified>2019-03-20T09:14:23.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppSettingsOverViewPage.xbf">
       <PackagePath>PagesPhone\AppSettingsOverViewPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.450</Modified>
+      <Modified>2019-03-20T09:14:23.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppSignInPage.xbf">
       <PackagePath>PagesPhone\AppSignInPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.450</Modified>
+      <Modified>2019-03-20T09:14:23.957</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\PagesPhone\AppSplashPage.xbf">
       <PackagePath>PagesPhone\AppSplashPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.451</Modified>
+      <Modified>2019-03-20T09:14:23.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Pages\PHR_Page.xbf">
       <PackagePath>Pages\PHR_Page.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.440</Modified>
+      <Modified>2019-03-20T09:14:23.948</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Pages\TitlesPage.xbf">
       <PackagePath>Pages\TitlesPage.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.452</Modified>
+      <Modified>2019-03-20T09:14:23.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\UserControls\TitlesUserControl.xbf">
       <PackagePath>UserControls\TitlesUserControl.xbf</PackagePath>
-      <Modified>2019-03-20T06:00:32.452</Modified>
+      <Modified>2019-03-20T09:14:23.959</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -1410,7 +1410,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Flazz\source\repos\FebOn\April_Master\SoloApps\PHRapp\PHRApp\PHRApp\bin\x86\Debug\Core\PHRApp.exe">
       <PackagePath>PHRApp.exe</PackagePath>
-      <Modified>2019-03-20T06:00:34.167</Modified>
+      <Modified>2019-03-20T09:14:25.398</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -91,10 +91,10 @@
             <ToggleSwitch x:ConnectionId='24' x:Name="TgsRepeats" Header="         Repeat" IsOn="True"
                           Margin="5 10 0 0" FontSize="12" HorizontalAlignment="Left"
                           VerticalAlignment="Top" Width="89"/>
-            <TextBox x:ConnectionId='25' x:Name="boxRepetitions" Text="10"  Header="   Times" FontSize="12"
+            <TextBox x:ConnectionId='25' x:Name="boxRepetitions" Text="30"  Header="   Times" FontSize="12"
                      Margin="-65,0,60,0" Height="50" HorizontalAlignment="Stretch" 
                      VerticalAlignment="Stretch"/>
-            <TextBox x:ConnectionId='26' x:Name="boxInterval" Text="8" Header="   Intrv Secs" 
+            <TextBox x:ConnectionId='26' x:Name="boxInterval" Text="7" Header="   Intrv Secs" 
                      FontSize="12" Height="50" Margin="-55,0,0,0" />
             <MediaElement x:ConnectionId='27' x:Name="MediaElementPrompter"/>
         </StackPanel>
