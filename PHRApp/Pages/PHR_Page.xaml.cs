@@ -284,8 +284,8 @@ namespace PHRApp.Pages
                         timesToTick = (Repetitions - 1);
                     }
                     //Increment Status
-                    tbElapsed.Text = PhRTiming.TsElapsed.Seconds.ToString();
-                    tbTotalTime.Text = TsTotalTime.Seconds.ToString();
+                    ////tbElapsed.Text = PhRTiming.TsElapsed.Seconds.ToString();
+                    ////tbTotalTime.Text = TsTotalTime.Seconds.ToString();
                     if (i > 0 && i <= IRep_Status)
                     {
                         Debug.WriteLine("Hit if(i > 0 && i <= IRep_Status)");
